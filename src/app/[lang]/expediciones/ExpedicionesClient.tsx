@@ -30,15 +30,15 @@ export default function ExpedicionesClient({ lang }: Props) {
     <main className={styles.page}>
       {/* HERO */}
       <section className={styles.hero}>
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className={styles.heroVideo}
-        >
-          <source src="/feroz.mp4" type="video/mp4" />
-        </video>
+        <div className={styles.heroVideoWrap}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/bn5YpHP_ciM?autoplay=1&mute=1&loop=1&playlist=bn5YpHP_ciM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title=""
+            className={styles.heroVideo}
+          />
+        </div>
         <div className={styles.heroBg} />
         <div className={styles.heroBgGrid} />
         <div className={styles.heroContent}>

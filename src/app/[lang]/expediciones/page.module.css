@@ -22,14 +22,26 @@
   background: #040a1c;
 }
 
-.heroVideo {
+.heroVideoWrap {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
   opacity: 0.5;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  min-width: 100%;
+  height: 56.25vw;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
 }
 
 .heroBg {

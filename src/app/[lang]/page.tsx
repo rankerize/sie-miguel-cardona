@@ -78,15 +78,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
       {/* (A) ATENCIÓN - HERO SECTION */}
       <section className={styles.hero}>
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className={styles.heroVideo}
-        >
-          <source src="/feroz.mp4" type="video/mp4" />
-        </video>
+        <div className={styles.heroVideoWrap}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/bn5YpHP_ciM?autoplay=1&mute=1&loop=1&playlist=bn5YpHP_ciM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title=""
+            className={styles.heroVideo}
+          />
+        </div>
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroContent}>
           <h1 className={`${styles.title} text-gradient`}>{dict.hero?.title}</h1>
