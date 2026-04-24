@@ -60,12 +60,21 @@
     "cta_final": "Reserve My Spot on WhatsApp"
   },
   "nav": {
-    "courses": "PADI Courses",
+    "courses": "Certifications",
     "open_water": "Open Water",
     "advanced": "Advanced Open Water",
-    "fun_dives": "Fun Dives",
     "destinations": "Expeditions",
+    "shop": "Shop",
     "blog": "Blog"
+  },
+  "shop": {
+    "regulators": "Regulators",
+    "bcd": "BCD",
+    "masks": "Masks",
+    "fins": "Fins",
+    "computers": "Dive Computers",
+    "wetsuits": "Wetsuits",
+    "accessories": "Accessories"
   },
   "courses": {
     "open_water": {

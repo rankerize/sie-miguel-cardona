@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import Image from "next/image";
 import { getDictionary } from "../../i18n";
 import { Locale } from "../../i18n";
 import ExpeditionsCarousel from "../../components/ExpeditionsCarousel";
+import EquipmentCarousel from "../../components/EquipmentCarousel";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -92,12 +92,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <div className={styles.heroContent}>
           <h1 className={`${styles.title} text-gradient`}>{dict.hero?.title}</h1>
           <p className={styles.subtitle}>{dict.hero?.subtitle}</p>
-          <div className={styles.actions}>
+          <div className={styles.actions} style={{ justifyContent: 'center' }}>
             <a href={`/${lang}/expediciones`} className="btn btn-primary">{dict.hero?.cta_primary}</a>
-            <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.8rem 1.5rem', borderRadius: '50px', border: '1px solid var(--color-primary)', color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>
-              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12.2 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-              Síguenos en Instagram
-            </a>
           </div>
         </div>
       </section>
@@ -146,41 +142,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </p>
               </div>
 
-              {/* INFOGRAPHIC CENTERPIECE */}
-              <div className={styles.equipInfographic}>
-                <Image 
-                  src="/images/equipo-infografia.jpg" 
-                  alt={dict.equipment.infographic_alt}
-                  fill
-                  sizes="100vw"
-                  priority
-                />
-              </div>
-
-              <div className={styles.equipGrid}>
-                {dict.equipment.items.map((item: any, i: number) => {
-                  const images = [
-                    'https://images.unsplash.com/photo-1596328325026-6a4a7f058098?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1610486337583-04b31174092b?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1621217036735-a77c3855ff4b?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1510414696678-2415ea84792e?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1513253245468-b7781b29a286?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1510619865039-4977464a2f45?q=80&w=600&auto=format&fit=crop',
-                    'https://images.unsplash.com/photo-1588616405785-02cd201f8101?q=80&w=600&auto=format&fit=crop'
-                  ];
-                  return (
-                    <div key={i} className={`glass-panel ${styles.equipCard}`}>
-                      <div className={styles.equipImageWrap}>
-                        <Image src={images[i]} alt={item.title} fill sizes="(max-width: 768px) 100vw, 300px" />
-                      </div>
-                      <div className={styles.equipContent}>
-                        <h3 className={styles.equipCardTitle}>{item.title}</h3>
-                        <p className={styles.equipCardDesc}>{item.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+              {/* EQUIPMENT CAROUSEL */}
+              <div style={{ marginTop: "3rem" }}>
+                <EquipmentCarousel lang={lang} />
               </div>
 
               {/* Ocean conditions banner */}

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, BookOpen, Compass, MapPin, Anchor } from "lucide-react";
+import { ChevronDown, Menu, X, BookOpen, Compass, MapPin, ShoppingBag, Wind, Shirt, Eye, Palmtree, Watch, Box } from "lucide-react";
 import styles from "./Navbar.module.css";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -13,21 +13,30 @@ type NavbarProps = {
     courses: string;
     open_water: string;
     advanced: string;
-    fun_dives: string;
     destinations: string;
+    shop?: string;
     blog: string;
+  };
+  shopDict?: {
+    regulators: string;
+    bcd: string;
+    masks: string;
+    fins: string;
+    computers: string;
+    wetsuits: string;
+    accessories: string;
   };
 };
 
-export default function Navbar({ lang, dict }: NavbarProps) {
+export default function Navbar({ lang, dict, shopDict }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [destsOpen, setDestsOpen] = useState(false);
-  const [funDivesOpen, setFunDivesOpen] = useState(false);
+  const [shopOpen, setShopOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const destsRef = useRef<HTMLLIElement>(null);
-  const dropdownRef = useRef<HTMLLIElement>(null);
-  const funDivesRef = useRef<HTMLLIElement>(null);
+  const coursesRef = useRef<HTMLLIElement>(null);
+  const shopRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -38,15 +47,24 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   // Close dropdowns on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) setCoursesOpen(false);
+      if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) setCoursesOpen(false);
       if (destsRef.current && !destsRef.current.contains(e.target as Node)) setDestsOpen(false);
-      if (funDivesRef.current && !funDivesRef.current.contains(e.target as Node)) setFunDivesOpen(false);
+      if (shopRef.current && !shopRef.current.contains(e.target as Node)) setShopOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-
+  const shopLabel = dict.shop || "Tienda";
+  const defaultShopDict = shopDict || {
+    regulators: "Reguladores",
+    bcd: "Chalecos (BCD)",
+    masks: "Máscaras",
+    fins: "Aletas",
+    computers: "Computadores",
+    wetsuits: "Trajes",
+    accessories: "Accesorios"
+  };
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
@@ -65,9 +83,66 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
         {/* Desktop menu */}
         <ul className={styles.desktopMenu}>
+          
+          {/* Expeditions dropdown */}
+          <li
+            ref={destsRef}
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => !menuOpen && setDestsOpen(true)}
+            onMouseLeave={() => !menuOpen && setDestsOpen(false)}
+          >
+            <Link
+              href={`/${lang}/expediciones`}
+              className={styles.navBtn}
+              onClick={() => setDestsOpen(false)}
+            >
+              {dict.destinations}
+              <ChevronDown size={16} className={`${styles.chevron} ${destsOpen ? styles.chevronOpen : ""}`} />
+            </Link>
+            {destsOpen && (
+              <div className={styles.dropdown}>
+                <Link href={`/${lang}/destinos/santa-marta`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
+                  <span className={styles.dropdownIcon}><MapPin size={20} /></span>
+                  <div>
+                    <div className={styles.dropdownItemTitle}>Santa Marta</div>
+                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Taganga · Coral · Gastronomía Caribeña" : "Taganga · Coral · Caribbean Gastronomy"}</div>
+                  </div>
+                </Link>
+                <Link href={`/${lang}/destinos/providencia`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
+                  <div>
+                    <div className={styles.dropdownItemTitle}>Providencia</div>
+                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Reserva UNESCO · Rondón · Cangrejo Negro" : "UNESCO Reserve · Rondón · Black Crab"}</div>
+                  </div>
+                </Link>
+                <Link href={`/${lang}/destinos/malpelo`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
+                  <span className={styles.dropdownIcon}><MapPin size={20} /></span>
+                  <div>
+                    <div className={styles.dropdownItemTitle}>Malpelo</div>
+                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Vida a Bordo · Tiburones Martillo" : "Liveaboard · Hammerhead Sharks"}</div>
+                  </div>
+                </Link>
+                <Link href={`/${lang}/destinos/gorgona`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
+                  <div>
+                    <div className={styles.dropdownItemTitle}>Gorgona</div>
+                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Vida a Bordo · Ballenas · Parque Nacional" : "Liveaboard · Whales · National Park"}</div>
+                  </div>
+                </Link>
+                <Link href={`/${lang}/destinos/isla-fuerte`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
+                  <div>
+                    <div className={styles.dropdownItemTitle}>Isla Fuerte</div>
+                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Coral virgen · Langosta fresca · Sin carros" : "Pristine coral · Fresh lobster · No cars"}</div>
+                  </div>
+                </Link>
+              </div>
+            )}
+          </li>
+
           {/* Cursos dropdown */}
           <li
-            ref={dropdownRef}
+            ref={coursesRef}
             className={styles.dropdownWrapper}
             onMouseEnter={() => !menuOpen && setCoursesOpen(true)}
             onMouseLeave={() => !menuOpen && setCoursesOpen(false)}
@@ -123,116 +198,50 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             )}
           </li>
 
-          {/* Fun Dives dropdown */}
+          {/* Tienda dropdown */}
           <li
-            ref={funDivesRef}
+            ref={shopRef}
             className={styles.dropdownWrapper}
-            onMouseEnter={() => !menuOpen && setFunDivesOpen(true)}
-            onMouseLeave={() => !menuOpen && setFunDivesOpen(false)}
-          >
-            <button
-              className={styles.navBtn}
-              onClick={() => setFunDivesOpen((v) => !v)}
-              aria-expanded={funDivesOpen}
-            >
-              {dict.fun_dives}
-              <ChevronDown
-                size={16}
-                className={`${styles.chevron} ${funDivesOpen ? styles.chevronOpen : ""}`}
-              />
-            </button>
-            {funDivesOpen && (
-              <div className={styles.dropdown}>
-                <Link href={`/${lang}/destinos/providencia`} className={styles.dropdownItem} onClick={() => setFunDivesOpen(false)}>
-                  <span className={styles.dropdownIcon}><Anchor size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Providencia ✦</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Reserva UNESCO · Arrecife coralino" : "UNESCO Reserve · Coral reef"}</div>
-                  </div>
-                </Link>
-                <Link href={`/${lang}/destinos/gorgona`} className={styles.dropdownItem} onClick={() => setFunDivesOpen(false)}>
-                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><Anchor size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Gorgona ✦</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Ballenas · Tiburones · Biodiversidad" : "Whales · Sharks · Biodiversity"}</div>
-                  </div>
-                </Link>
-                <Link href={`/${lang}/destinos/malpelo`} className={styles.dropdownItem} onClick={() => setFunDivesOpen(false)}>
-                  <span className={styles.dropdownIcon}><Anchor size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Malpelo ✦</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Patrimonio UNESCO · Tiburones martillo" : "UNESCO Heritage · Hammerhead sharks"}</div>
-                  </div>
-                </Link>
-                <Link href={`/${lang}/destinos/isla-fuerte`} className={styles.dropdownItem} onClick={() => setFunDivesOpen(false)}>
-                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><Anchor size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Isla Fuerte ✦</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Coral virgen · Aguas cristalinas" : "Pristine coral · Crystal waters"}</div>
-                  </div>
-                </Link>
-                <Link href={`/${lang}/destinos/santa-marta`} className={styles.dropdownItem} onClick={() => setFunDivesOpen(false)}>
-                  <span className={styles.dropdownIcon}><Anchor size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Taganga ✦</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Arrecifes · Tortugas · Caribe colombiano" : "Reefs · Turtles · Colombian Caribbean"}</div>
-                  </div>
-                </Link>
-              </div>
-            )}
-          </li>
-
-          {/* Expeditions dropdown */}
-          <li
-            ref={destsRef}
-            className={styles.dropdownWrapper}
-            onMouseEnter={() => setDestsOpen(true)}
-            onMouseLeave={() => setDestsOpen(false)}
+            onMouseEnter={() => !menuOpen && setShopOpen(true)}
+            onMouseLeave={() => !menuOpen && setShopOpen(false)}
           >
             <Link
-              href={`/${lang}/expediciones`}
+              href={`/${lang}/tienda`}
               className={styles.navBtn}
-              onClick={() => setDestsOpen(false)}
+              onClick={() => setShopOpen(false)}
             >
-              {dict.destinations}
-              <ChevronDown size={16} className={`${styles.chevron} ${destsOpen ? styles.chevronOpen : ""}`} />
+              {shopLabel}
+              <ChevronDown size={16} className={`${styles.chevron} ${shopOpen ? styles.chevronOpen : ""}`} />
             </Link>
-            {destsOpen && (
+            {shopOpen && (
               <div className={styles.dropdown}>
-                <Link href={`/${lang}/destinos/santa-marta`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
-                  <span className={styles.dropdownIcon}><MapPin size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Santa Marta</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Taganga · Coral · Gastronomía Caribeña" : "Taganga · Coral · Caribbean Gastronomy"}</div>
-                  </div>
+                <Link href={`/${lang}/tienda/reguladores`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={styles.dropdownIcon}><Wind size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.regulators}</div></div>
                 </Link>
-                <Link href={`/${lang}/destinos/providencia`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
-                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Providencia</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Reserva UNESCO · Rondón · Cangrejo Negro" : "UNESCO Reserve · Rondón · Black Crab"}</div>
-                  </div>
+                <Link href={`/${lang}/tienda/bcd`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><Shirt size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.bcd}</div></div>
                 </Link>
-                <Link href={`/${lang}/destinos/malpelo`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
-                  <span className={styles.dropdownIcon}><MapPin size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Malpelo</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Vida a Bordo · Tiburones Martillo" : "Liveaboard · Hammerhead Sharks"}</div>
-                  </div>
+                <Link href={`/${lang}/tienda/mascaras`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={styles.dropdownIcon}><Eye size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.masks}</div></div>
                 </Link>
-                <Link href={`/${lang}/destinos/gorgona`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
-                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Gorgona</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Vida a Bordo · Ballenas · Parque Nacional" : "Liveaboard · Whales · National Park"}</div>
-                  </div>
+                <Link href={`/${lang}/tienda/aletas`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><Palmtree size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.fins}</div></div>
                 </Link>
-                <Link href={`/${lang}/destinos/isla-fuerte`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
-                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><MapPin size={20} /></span>
-                  <div>
-                    <div className={styles.dropdownItemTitle}>Isla Fuerte</div>
-                    <div className={styles.dropdownItemDesc}>{lang === "es" ? "Coral virgen · Langosta fresca · Sin carros" : "Pristine coral · Fresh lobster · No cars"}</div>
-                  </div>
+                <Link href={`/${lang}/tienda/computadores`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={styles.dropdownIcon}><Watch size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.computers}</div></div>
+                </Link>
+                <Link href={`/${lang}/tienda/trajes-neopreno`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={`${styles.dropdownIcon} ${styles.dropdownIconDeep}`}><Shirt size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.wetsuits}</div></div>
+                </Link>
+                <Link href={`/${lang}/tienda/accesorios`} className={styles.dropdownItem} onClick={() => setShopOpen(false)}>
+                  <span className={styles.dropdownIcon}><Box size={20} /></span>
+                  <div><div className={styles.dropdownItemTitle}>{defaultShopDict.accessories}</div></div>
                 </Link>
               </div>
             )}
@@ -241,7 +250,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           {/* Noticias / Blog */}
           <li>
             <Link href={`/${lang}/noticias`} className={styles.navBtn}>
-              {dict.blog || "Noticias"}
+              {dict.blog || "Blog"}
             </Link>
           </li>
         </ul>
@@ -263,43 +272,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
       {/* Mobile menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          <div className={styles.mobileSection}>
-            <div className={styles.mobileSectionLabel}>{dict.courses}</div>
-            <Link
-              href={`/${lang}/cursos-padi/open-water`}
-              className={styles.mobileItem}
-              onClick={() => setMenuOpen(false)}
-            >
-              <BookOpen size={18} />
-              {dict.open_water}
-            </Link>
-            <Link
-              href={`/${lang}/cursos-padi/advanced`}
-              className={styles.mobileItem}
-              onClick={() => setMenuOpen(false)}
-            >
-              <Compass size={18} />
-              {dict.advanced}
-            </Link>
-          </div>
-          <div className={styles.mobileSection}>
-            <div className={styles.mobileSectionLabel}>{dict.fun_dives}</div>
-            <Link href={`/${lang}/destinos/providencia`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
-              <Anchor size={18} />Providencia ✦
-            </Link>
-            <Link href={`/${lang}/destinos/gorgona`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
-              <Anchor size={18} />Gorgona ✦
-            </Link>
-            <Link href={`/${lang}/destinos/malpelo`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
-              <Anchor size={18} />Malpelo ✦
-            </Link>
-            <Link href={`/${lang}/destinos/isla-fuerte`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
-              <Anchor size={18} />Isla Fuerte ✦
-            </Link>
-            <Link href={`/${lang}/destinos/santa-marta`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
-              <Anchor size={18} />Taganga ✦
-            </Link>
-          </div>
+          {/* Mobile Expeditions */}
           <div className={styles.mobileSection}>
             <Link 
               href={`/${lang}/expediciones`} 
@@ -325,13 +298,63 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               <MapPin size={18} />Isla Fuerte
             </Link>
           </div>
+
+          {/* Mobile Cursos */}
+          <div className={styles.mobileSection}>
+            <div className={styles.mobileSectionLabel}>{dict.courses}</div>
+            <Link
+              href={`/${lang}/cursos-padi/open-water`}
+              className={styles.mobileItem}
+              onClick={() => setMenuOpen(false)}
+            >
+              <BookOpen size={18} />
+              {dict.open_water}
+            </Link>
+            <Link
+              href={`/${lang}/cursos-padi/advanced`}
+              className={styles.mobileItem}
+              onClick={() => setMenuOpen(false)}
+            >
+              <Compass size={18} />
+              {dict.advanced}
+            </Link>
+          </div>
+
+          {/* Mobile Tienda */}
+          <div className={styles.mobileSection}>
+            <Link 
+              href={`/${lang}/tienda`} 
+              className={styles.mobileSectionLabel} 
+              style={{ display: 'block', textDecoration: 'none' }}
+              onClick={() => setMenuOpen(false)}
+            >
+              🛍️ {shopLabel}
+            </Link>
+            <Link href={`/${lang}/tienda/reguladores`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
+              <Wind size={18} />{defaultShopDict.regulators}
+            </Link>
+            <Link href={`/${lang}/tienda/bcd`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
+              <Shirt size={18} />{defaultShopDict.bcd}
+            </Link>
+            <Link href={`/${lang}/tienda/mascaras`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
+              <Eye size={18} />{defaultShopDict.masks}
+            </Link>
+            <Link href={`/${lang}/tienda/aletas`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
+              <Palmtree size={18} />{defaultShopDict.fins}
+            </Link>
+            <Link href={`/${lang}/tienda/computadores`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
+              <Watch size={18} />{defaultShopDict.computers}
+            </Link>
+          </div>
+
+          {/* Mobile Blog */}
           <div className={styles.mobileSection}>
             <Link
               href={`/${lang}/noticias`}
               className={styles.mobileItem}
               onClick={() => setMenuOpen(false)}
             >
-              📰 {dict.blog || "Noticias"}
+              📰 {dict.blog || "Blog"}
             </Link>
           </div>
         </div>

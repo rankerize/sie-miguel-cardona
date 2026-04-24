@@ -50,13 +50,13 @@ export default async function OpenWaterPage({ params }: { params: Promise<{ lang
               <ChevronRight size={18} />
             </a>
           </div>
-          <div className={styles.heroImageWrap}>
-            <Image 
-              src="/images/open-water-course.jpg"
-              alt="PADI Open Water Diver Course"
-              fill
-              sizes="(max-width: 992px) 100vw, 50vw"
-              priority
+          <div className={styles.heroVideoWrap}>
+            <iframe 
+              src="https://www.youtube.com/embed/2SnbOvrgo2A?autoplay=1&mute=1&loop=1&playlist=2SnbOvrgo2A&controls=0&modestbranding=1&rel=0&playsinline=1"
+              title="PADI Open Water Diver Course"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
           </div>
         </div>
@@ -163,7 +163,7 @@ export default async function OpenWaterPage({ params }: { params: Promise<{ lang
       {/* ─── DURATION / INCLUDE ─── */}
       <section className={`${styles.section} ${styles.infoSection}`}>
         <div className={styles.container}>
-          <div className={styles.infoGrid}>
+          <div className={styles.infoGrid} style={{ marginBottom: "3rem" }}>
             <div className={styles.infoCard}>
               <Clock size={28} className={styles.infoIcon} />
               <h3>{lang === "es" ? "Duración" : "Duration"}</h3>
@@ -174,10 +174,34 @@ export default async function OpenWaterPage({ params }: { params: Promise<{ lang
               <h3>{lang === "es" ? "Certificación" : "Certification"}</h3>
               <p>{lang === "es" ? "Recibes la certificación PADI Open Water Diver, reconocida mundialmente. Válida de por vida para bucear hasta 18m con un compañero." : "You receive the internationally recognized PADI Open Water Diver certification. Valid for life to dive up to 18m with a buddy."}</p>
             </div>
+          </div>
+
+          <div className={styles.sectionHeader} style={{ marginBottom: "2.5rem" }}>
+            <h2 className={styles.sectionTitle} style={{ fontSize: "1.8rem" }}>
+              {lang === "es" ? "Lugares de prácticas" : "Dive Sites"}
+            </h2>
+            <p className={styles.sectionDesc}>
+              {lang === "es" 
+                ? "Depende de tus ganas y necesidades de aventura. Elige entre estos destinos:"
+                : "Depending on your desire for adventure. Choose between these destinations:"}
+            </p>
+          </div>
+
+          <div className={styles.infoGrid}>
             <div className={styles.infoCard}>
               <Waves size={28} className={styles.infoIcon} />
-              <h3>{lang === "es" ? "Lugar de prácticas" : "Dive site"}</h3>
-              <p>{lang === "es" ? "Taganga, Santa Marta — uno de los mejores destinos de buceo del Caribe colombiano. Arrecifes vibrantes y aguas cristalinas." : "Taganga, Santa Marta — one of the best diving spots on the Colombian Caribbean. Vibrant reefs and crystal-clear waters."}</p>
+              <h3>Providencia</h3>
+              <p>{lang === "es" ? "Uno de los mejores destinos de buceo del Caribe colombiano. Biodiversidad, arrecifes vibrantes y aguas cristalinas." : "One of the best dive destinations in the Colombian Caribbean. Biodiversity, vibrant reefs and crystal-clear waters."}</p>
+            </div>
+            <div className={styles.infoCard}>
+              <Waves size={28} className={styles.infoIcon} />
+              <h3>Isla Fuerte</h3>
+              <p>{lang === "es" ? "Uno de los mejores destinos de buceo del Caribe colombiano. Biodiversidad, arrecifes vibrantes y aguas cristalinas." : "One of the best dive destinations in the Colombian Caribbean. Biodiversity, vibrant reefs and crystal-clear waters."}</p>
+            </div>
+            <div className={styles.infoCard}>
+              <Waves size={28} className={styles.infoIcon} />
+              <h3>Taganga</h3>
+              <p>{lang === "es" ? "Uno de los mejores destinos de buceo del Caribe colombiano. Biodiversidad, arrecifes vibrantes y aguas cristalinas." : "One of the best dive destinations in the Colombian Caribbean. Biodiversity, vibrant reefs and crystal-clear waters."}</p>
             </div>
           </div>
         </div>

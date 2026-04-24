@@ -17,29 +17,76 @@ export default function ExpeditionsCarousel({ lang }: Props) {
     isEs ? "Hola, quiero info sobre las expediciones de buceo 🐠" : "Hi, I'd like info about the diving expeditions 🐠"
   )}`;
 
-  const scrollTo = (idx: number) => {
-    if (!trackRef.current) return;
-    const card = trackRef.current.children[idx] as HTMLElement;
-    if (card) {
-      card.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-    }
+  /**
+   * Scroll the carousel TRACK horizontally to a given card index.
+   * We use scrollLeft directly so we NEVER touch the page's vertical scroll.
+   * scrollIntoView() was the culprit — it can pull ancestor scroll containers
+   * (including the page itself) to make the element visible.
+   */
+  const scrollToIdx = (idx: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.children[idx] as HTMLElement;
+    if (!card) return;
+    // offsetLeft gives the card's position relative to the track
+    const targetLeft = card.offsetLeft - (track.offsetWidth - card.offsetWidth) / 2;
+    track.scrollTo({ left: targetLeft, behavior: "smooth" });
     setActiveIdx(idx);
   };
 
-  const prev = () => scrollTo(Math.max(0, activeIdx - 1));
-  const next = () => scrollTo(Math.min(DESTINATIONS.length - 1, activeIdx + 1));
+  const prev = () => scrollToIdx(Math.max(0, activeIdx - 1));
+  const next = () => scrollToIdx(Math.min(DESTINATIONS.length - 1, activeIdx + 1));
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    const handler = () => {
+
+    // Sync active index on scroll
+    const scrollHandler = () => {
       const cardWidth = (track.children[0] as HTMLElement)?.offsetWidth || 380;
       const gap = 32;
       const idx = Math.round(track.scrollLeft / (cardWidth + gap));
       setActiveIdx(Math.min(Math.max(0, idx), DESTINATIONS.length - 1));
     };
-    track.addEventListener("scroll", handler, { passive: true });
-    return () => track.removeEventListener("scroll", handler);
+    track.addEventListener("scroll", scrollHandler, { passive: true });
+
+    // Prevent the carousel from hijacking vertical page scroll.
+    // Only consume the wheel event if the user is scrolling horizontally.
+    const wheelHandler = (e: WheelEvent) => {
+      const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+      if (!isHorizontalScroll) {
+        // Vertical scroll → let the page handle it
+        return;
+      }
+      // Horizontal scroll → move the carousel
+      e.preventDefault();
+      track.scrollLeft += e.deltaX;
+    };
+    track.addEventListener("wheel", wheelHandler, { passive: false });
+
+    return () => {
+      track.removeEventListener("scroll", scrollHandler);
+      track.removeEventListener("wheel", wheelHandler);
+    };
+  }, []);
+
+  // Auto-advance every 5s — uses scrollLeft, never scrollIntoView
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIdx((currentIdx) => {
+        const nextIdx = (currentIdx + 1) % DESTINATIONS.length;
+        const track = trackRef.current;
+        if (track) {
+          const card = track.children[nextIdx] as HTMLElement;
+          if (card) {
+            const targetLeft = card.offsetLeft - (track.offsetWidth - card.offsetWidth) / 2;
+            track.scrollTo({ left: targetLeft, behavior: "smooth" });
+          }
+        }
+        return nextIdx;
+      });
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -123,7 +170,7 @@ export default function ExpeditionsCarousel({ lang }: Props) {
             <button
               key={i}
               className={`${styles.dot} ${activeIdx === i ? styles.dotActive : ""}`}
-              onClick={() => scrollTo(i)}
+              onClick={() => scrollToIdx(i)}
               aria-label={`Destino ${i + 1}`}
             />
           ))}

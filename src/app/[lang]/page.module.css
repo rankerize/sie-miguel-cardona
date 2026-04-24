@@ -196,9 +196,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: stretch; /* tarjetas de igual altura */
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .featureGrid {
     grid-template-columns: 1fr;
   }
@@ -206,8 +207,11 @@
 
 .featureCard {
   text-align: center;
-  padding: 1.5rem !important;
+  padding: 2rem 1.5rem !important;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .featureCard:hover {
@@ -721,10 +725,10 @@
 .oceanBanner {
   margin-top: 5rem;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  /* Sin flex-wrap: las tarjetas siempre comparten la misma línea */
   padding: 3rem;
   background: rgba(4, 10, 28, 0.6);
   border-radius: 24px;
@@ -734,7 +738,7 @@
 
 .oceanCard {
   flex: 1;
-  min-width: 300px;
+  min-width: 0; /* permite que el flex item encoja por debajo de su contenido */
   padding: 2rem;
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 100, 200, 0.05) 100%);
@@ -808,10 +812,11 @@
   .oceanBanner {
     padding: 1.5rem;
     gap: 1.5rem;
+    flex-direction: column;
   }
   
   .oceanCard {
-    min-width: 100%;
+    width: 100%;
   }
   
   .equipTitle {

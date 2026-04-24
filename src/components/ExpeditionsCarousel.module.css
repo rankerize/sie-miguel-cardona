@@ -52,10 +52,11 @@
   gap: 2rem;
   padding: 1rem 4rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type removido: el snap puede interferir con el scroll vertical de la página.
+     El desplazamiento entre tarjetas lo gestiona scrollToIdx() desde JS. */
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scroll-behavior: smooth;
+  /* scroll-behavior removido: se pasa behavior:"smooth" directamente en track.scrollTo() */
 }
 
 .carouselTrack::-webkit-scrollbar {

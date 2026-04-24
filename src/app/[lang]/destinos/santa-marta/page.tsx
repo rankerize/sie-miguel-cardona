@@ -85,8 +85,8 @@ export default async function SantaMartaPage({ params }: { params: Promise<{ lan
             <p className={styles.sectionDesc}>{isEs ? "Taganga concentra algunos de los mejores sitios de buceo del Caribe colombiano, a pocos minutos en lancha desde el pueblo." : "Taganga hosts some of the best dive sites on the Colombian Caribbean, just minutes by boat from the village."}</p>
           </div>
           <div className={styles.diveImgWrap}>
-            <img src="/images/img-1beb6992.jpg" alt="Santa Marta Reef" className={styles.diveImg} />
-            <div className={styles.diveImgOverlay}><span>{isEs ? "Parque Tayrona · Visibilidad hasta 20m" : "Tayrona Park · Visibility up to 20m"}</span></div>
+            <img src="/images/isla-aguja.png" alt="Isla Aguja, Taganga" className={styles.diveImg} />
+            <div className={styles.diveImgOverlay}><span>{isEs ? "Isla Aguja, Taganga · Visibilidad hasta 20m" : "Isla Aguja, Taganga · Visibility up to 20m"}</span></div>
           </div>
           <div className={styles.spotsGrid}>
             {DIVE_SPOTS.map((s, i) => (

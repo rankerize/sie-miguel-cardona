@@ -11,7 +11,6 @@ const DIVE_SPOTS = [
   { name: "Third Encounter", depth: "10–30m", level: "Intermedio", desc: "Paredes verticales de coral y cardúmenes masivos de barracudas. Uno de los 10 mejores del Caribe." },
   { name: "Manta's Place", depth: "8–20m", level: "Principiante", desc: "Zona de encuentro con mantas raya y tiburones nodriza que descansan en el fondo arenoso." },
   { name: "Shark Dive", depth: "15–25m", level: "Intermedio", desc: "Inmersión guiada con tiburones de punta negra en su entorno natural. 100% segura." },
-  { name: "Coral Garden", depth: "5–14m", level: "Principiante", desc: "Jardín de coral somero: coral cerebro, estrella y cuerno de alce en excelente estado." },
 ];
 
 const GASTRO = [
@@ -59,9 +58,16 @@ export default async function ProvidenciaPage({ params }: { params: Promise<{ la
             <h2 className={styles.sectionTitle}>{isEs ? "El Mejor Arrecife del Caribe" : "The Caribbean's Best Reef"}</h2>
             <p className={styles.sectionDesc}>{isEs ? "Reserva de Biosfera UNESCO. El arrecife de barrera de Providencia concentra la mayor biodiversidad del Caribe occidental." : "UNESCO Biosphere Reserve. The barrier reef hosts the highest marine biodiversity in the western Caribbean."}</p>
           </div>
-          <div className={styles.diveImgWrap}>
-            <img src="/images/img-1beb6992.jpg" alt="Reef Providencia" className={styles.diveImg} />
-            <div className={styles.diveImgOverlay}><span>{isEs ? "Reserva UNESCO · Visibilidad hasta 30m" : "UNESCO Reserve · Visibility up to 30m"}</span></div>
+          <div className={styles.diveImgWrap} style={{ height: "auto", aspectRatio: "16/9" }}>
+            <iframe 
+              src="https://www.youtube.com/embed/4NzoEjkW3Kc?autoplay=1&mute=1&loop=1&playlist=4NzoEjkW3Kc" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+              style={{ width: "100%", height: "100%", borderRadius: "20px" }}
+            ></iframe>
           </div>
           <div className={styles.spotsGrid}>
             {DIVE_SPOTS.map((s, i) => (
@@ -77,9 +83,9 @@ export default async function ProvidenciaPage({ params }: { params: Promise<{ la
           </div>
           <div className={styles.infoBoxRow}>
             {[
-              { icon: <CheckCircle2 size={18} className={styles.infoIcon} />, title: isEs ? "Vuelo + buceo incluido" : "Flight + diving included", desc: isEs ? "Coordinamos todo desde Santa Marta o Bogotá." : "We coordinate everything from Santa Marta or Bogotá." },
-              { icon: <Clock size={18} className={styles.infoIcon} />, title: isEs ? "Paquete 4 días" : "4-day package", desc: isEs ? "Vuelo, alojamiento y 8 inmersiones." : "Flight, accommodation and 8 dives." },
-              { icon: <Anchor size={18} className={styles.infoIcon} />, title: isEs ? "Área protegida" : "Protected area", desc: isEs ? "Buceo responsable en Reserva de Biosfera." : "Responsible diving in Biosphere Reserve." },
+              { icon: <CheckCircle2 size={18} className={styles.infoIcon} />, title: isEs ? "Hospedaje + Buceo incluido" : "Accommodation + Diving included", desc: isEs ? "Alojamiento en acomodación múltiple e inmersiones coordinadas en un solo paquete (Incluye Desayuno)." : "Multiple accommodation and coordinated dives in one package (Breakfast included)." },
+              { icon: <Clock size={18} className={styles.infoIcon} />, title: isEs ? "Paquetes de 3 o 4 días" : "3 or 4-day packages", desc: isEs ? "A convenir dependiendo de la cantidad de aventuras a diseñar (Si eres Advance bucearemos de noche)." : "To be agreed depending on the adventures you want to design (Advanced divers dive at night)." },
+              { icon: <Anchor size={18} className={styles.infoIcon} />, title: isEs ? "Área Protegida" : "Protected Area", desc: isEs ? "Bucearemos en Parque Nacional Natural Old Providence McBean Lagoon, el cual forma parte de la gran Reserva de la Biósfera Seaflower." : "We dive in the Old Providence McBean Lagoon National Natural Park, part of the Seaflower Biosphere Reserve." },
             ].map((b, i) => (
               <div key={i} className={styles.infoBox}>{b.icon}<div><strong>{b.title}</strong><p>{b.desc}</p></div></div>
             ))}

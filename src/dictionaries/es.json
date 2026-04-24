@@ -15,15 +15,15 @@
     "features": [
       {
         "title": "Los Mejores Sitios de Buceo",
-        "desc": "Taganga concentra arrecifes de coral, tortugas marinas y visibilidad de hasta 20 metros. Uno de los mejores sitios de buceo en Colombia según buceadores de todo el mundo."
+        "desc": "Arrecifes de coral, tortugas marinas, tiburones y visibilidad de hasta 20 metros. Providencia es uno de los mejores sitios de buceo en Colombia según buceadores de todo el mundo."
       },
       {
-        "title": "Escuela PADI Certificada",
-        "desc": "SIE DIVING es una escuela de buceo en Colombia con instructores PADI de élite. Formamos principiantes y buceadores avanzados con los más altos estándares internacionales de seguridad."
+        "title": "Escuelas 5 Stars Certificadas",
+        "desc": "SIE DIVING es una agencia de buceo en Colombia con instructores PADI/SSI de élite. Formamos principiantes y buceadores avanzados con los más altos estándares internacionales de seguridad."
       },
       {
         "title": "Precio Justo, Calidad Premium",
-        "desc": "¿Cuánto vale un curso de buceo en Colombia? Con SIE DIVING obtienes certificación PADI internacional, equipo incluido y grupos pequeños al mejor precio del Caribe colombiano."
+        "desc": "¿Cuánto vale un curso de buceo en Colombia? La Misión de SIE DIVING es compartir nuestro amor, pasión y conocimiento del mar al mismo tiempo que aprenderemos a conservar los ecosistemas marinos acompañados del mejor equipo."
       }
     ]
   },
@@ -60,12 +60,21 @@
     "cta_final": "Reservar mi Cupo Ahora"
   },
   "nav": {
-    "courses": "Cursos PADI",
+    "courses": "Certificaciones",
     "open_water": "Open Water",
     "advanced": "Advanced Open Water",
-    "fun_dives": "Fun Dives",
     "destinations": "Expediciones",
+    "shop": "Tienda",
     "blog": "Blog"
+  },
+  "shop": {
+    "regulators": "Reguladores",
+    "bcd": "Chalecos (BCD)",
+    "masks": "Máscaras",
+    "fins": "Aletas",
+    "computers": "Computadores",
+    "wetsuits": "Trajes de Neopreno",
+    "accessories": "Accesorios"
   },
   "courses": {
     "open_water": {

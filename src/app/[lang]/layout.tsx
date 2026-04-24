@@ -53,7 +53,7 @@ export default async function LangLayout({
   const dictionary = await getDictionary(lang as Locale);
   return (
     <>
-      <Navbar lang={lang} dict={dictionary.nav} />
+      <Navbar lang={lang} dict={dictionary.nav} shopDict={dictionary.shop} />
       {children}
     </>
   );
