@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Tauchen in Kolumbien | PADI-Kurse in Taganga, Santa Marta · SIE DIVING",
+    "description": "Tauchen in Kolumbien: Taganga, Santa Marta. SIE DIVING ist die führende Tauchschule der kolumbianischen Karibik. PADI Open Water und Advanced Kurse mit zertifizierten Instructors."
+  },
+  "hero": {
+    "title": "Tauchen in Kolumbien",
+    "subtitle": "Entdecken Sie die Artenvielfalt von Providencia, Isla Fuerte, Gorgona, Malpelo und Taganga. Eliteausbildung und einzigartige Expeditionen an Kolumbiens besten Tauchspots mit SIE DIVING.",
+    "cta_primary": "Expeditionen ansehen",
+    "cta_whatsapp": "Per WhatsApp reservieren"
+  },
+  "interest": {
+    "title": "Wo taucht man in Kolumbien?",
+    "desc": "Kolumbien hat einige der besten Tauchplätze der Welt: Providencia, Isla Fuerte, Gorgona, Malpelo und Taganga. SIE DIVING bringt Sie zu allen. Wir bauen Vertrauen in Ihre Ausbildung und gestalten Erlebnisse für zertifizierte Taucher in Kolumbien und der Welt.",
+    "features": [
+      {
+        "title": "Einzigartige Artenvielfalt",
+        "desc": "Begegnen Sie Meeresschildkröten, Rochen und bunten Fischschwärmen in ihrem natürlichen Lebensraum."
+      },
+      {
+        "title": "PADI-Instructors",
+        "desc": "Lernen Sie von international zertifizierten Fachleuten, die Ihre Sicherheit an erste Stelle setzen."
+      },
+      {
+        "title": "Kristallklares Wasser",
+        "desc": "Genießen Sie außergewöhnliche Sicht im warmen Karibischen Meer, das ganze Jahr über."
+      }
+    ]
+  },
+  "desire": {
+    "title": "Unsere Kurse & Erlebnisse",
+    "date_highlight": "Nächste Expedition: 13.–18. Juni",
+    "padi_ow": {
+      "title": "PADI Open Water",
+      "desc": "Ihr Pass in die Unterwasserwelt. Die weltweit anerkannteste Tauchlizenz.",
+      "price": "$--- COP",
+      "features": [
+        "Komplette Tauchausrüstung inklusive",
+        "Übungssessions im Freiwasser",
+        "4 Meerestauchgänge (Taganga)",
+        "Internationale PADI-Zertifizierung"
+      ]
+    },
+    "padi_adv": {
+      "title": "PADI Advanced",
+      "desc": "Bringen Sie Ihre Fähigkeiten auf das nächste Level. Entdecken Sie Tieftauchen, Navigation und mehr.",
+      "price": "$--- COP",
+      "features": [
+        "5 Spezialtauchgänge",
+        "Tieftauchen (bis 30m) und Navigation",
+        "Optimaler Auftrieb",
+        "PADI Advanced Open Water Zertifizierung"
+      ]
+    },
+    "book_btn": "Ich möchte diesen Kurs"
+  },
+  "action": {
+    "title": "Bereit für das Abenteuer Ihres Lebens?",
+    "desc": "Die Plätze für unsere Taganga-Expedition sind begrenzt. Sichern Sie sich jetzt Ihren Platz und machen Sie sich bereit, eine neue Welt zu entdecken.",
+    "cta_final": "Meinen Platz per WhatsApp reservieren"
+  },
+  "nav": {
+    "courses": "PADI-Kurse",
+    "open_water": "Open Water",
+    "advanced": "Advanced Open Water",
+    "fun_dives": "Fun Dives",
+    "destinations": "Reiseziele",
+    "blog": "Blog"
+  },
+  "courses": {
+    "open_water": {
+      "title": "PADI Open Water Diver Kurs",
+      "subtitle": "Ihr Pass in die Unterwasserwelt. Die weltweit anerkannteste Tauchlizenz.",
+      "modules_title": "Was ist enthalten?",
+      "modules": [
+        {
+          "title": "Wissensvermittlung",
+          "desc": "Lernen Sie die Grundprinzipien des Tauchens, Sicherheitskonzepte und Tauchplanung via PADI eLearning oder im Klassenzimmer."
+        },
+        {
+          "title": "Freiwassertauchgänge",
+          "desc": "Üben Sie wesentliche Fähigkeiten in einer poolähnlichen Umgebung, einschließlich Ausrüstungsaufbau, Maskenleerung und Auftriebskontrolle."
+        },
+        {
+          "title": "Offene Wassertauchgänge",
+          "desc": "Absolvieren Sie 4 Ozean-Tauchgänge (in Taganga), um Ihre Fähigkeiten zu demonstrieren und echte Erfahrungen zu sammeln."
+        }
+      ],
+      "prerequisites_title": "Voraussetzungen",
+      "prerequisites": [
+        "Schwimmen können und 10 Minuten über Wasser bleiben.",
+        "Mindestens 10 Jahre alt.",
+        "Allgemein gute körperliche Gesundheit."
+      ],
+      "cta": "Meinen Open Water Kurs starten"
+    },
+    "advanced": {
+      "title": "PADI Advanced Open Water Kurs",
+      "subtitle": "Bringen Sie Ihre Fähigkeiten mit 5 Abenteuertauchgängen auf das nächste Level. Weniger Theorie, mehr Action.",
+      "modules_title": "Ihre 5 Abenteuertauchgänge",
+      "required_title": "Pflichtliche Tauchgänge",
+      "required_modules": [
+        {
+          "title": "Tieftauchen",
+          "desc": "Lernen Sie, Tauchgänge zwischen 18 und 30 Metern sicher zu planen und durchzuführen."
+        },
+        {
+          "title": "Unterwassernavigation",
+          "desc": "Verbessern Sie Ihre Kompassfähigkeiten und lernen Sie, sich mit visuellen Referenzen zu orientieren."
+        }
+      ],
+      "elective_title": "Wahltauchgänge (Beispiele)",
+      "elective_modules": [
+        {
+          "title": "Optimaler Auftrieb",
+          "desc": "Beherrschen Sie Ihre Wasserkontrolle, um mühelos zu tauchen und Luft zu sparen."
+        },
+        {
+          "title": "Nachttauchen",
+          "desc": "Entdecken Sie, wie das Riff nachts zum Leben erwacht, und lernen Sie Taschenlampen-Kommunikationstechniken."
+        },
+        {
+          "title": "Wracktauchen",
+          "desc": "Lernen Sie die Grundlagen des sicheren Tauchens rund um versunkene Wracks."
+        }
+      ],
+      "prerequisites_title": "Voraussetzungen",
+      "prerequisites": [
+        "Als PADI Open Water Diver zertifiziert (oder gleichwertig).",
+        "Mindestens 15 Jahre alt (12 Jahre für Junior Advanced).",
+        "Gute körperliche Gesundheit."
+      ],
+      "cta": "Zum nächsten Level aufsteigen"
+    }
+  }
+}

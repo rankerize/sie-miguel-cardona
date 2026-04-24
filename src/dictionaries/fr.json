@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Plongée en Colombie | Cours PADI à Taganga, Santa Marta · SIE DIVING",
+    "description": "Plongée sous-marine en Colombie : Taganga, Santa Marta. SIE DIVING est l'école de plongée leader de la Caraïbe colombienne. Cours PADI Open Water et Advanced avec des instructeurs certifiés."
+  },
+  "hero": {
+    "title": "Plongée en Colombie",
+    "subtitle": "Explorez la biodiversité de Providencia, Isla Fuerte, Gorgona, Malpelo et Taganga. Formation d'élite et expéditions uniques dans les meilleurs spots de plongée de Colombie avec SIE DIVING.",
+    "cta_primary": "Voir les Expéditions",
+    "cta_whatsapp": "Réserver sur WhatsApp"
+  },
+  "interest": {
+    "title": "Où Plonger en Colombie ?",
+    "desc": "La Colombie possède certains des meilleurs sites de plongée au monde : Providencia, Isla Fuerte, Gorgona, Malpelo et Taganga. SIE DIVING vous emmène dans tous ces endroits. Nous bâtissons la confiance dans votre formation et concevons des expériences pour les plongeurs certifiés en Colombie et dans le monde.",
+    "features": [
+      {
+        "title": "Biodiversité Unique",
+        "desc": "Rencontrez des tortues marines, des raies et des bancs de poissons colorés dans leur habitat naturel."
+      },
+      {
+        "title": "Instructeurs PADI",
+        "desc": "Apprenez avec des professionnels certifiés au niveau international qui placent votre sécurité au premier plan."
+      },
+      {
+        "title": "Eaux Cristallines",
+        "desc": "Profitez d'une visibilité exceptionnelle dans la mer des Caraïbes chaude, toute l'année."
+      }
+    ]
+  },
+  "desire": {
+    "title": "Nos Cours et Expériences",
+    "date_highlight": "Prochaine Expédition : 13–18 Juin",
+    "padi_ow": {
+      "title": "PADI Open Water",
+      "desc": "Votre passeport pour le monde sous-marin. La certification de plongée la plus reconnue au monde.",
+      "price": "$--- COP",
+      "features": [
+        "Équipement de plongée complet inclus",
+        "Sessions de pratique en eau confinée",
+        "4 plongées en mer (Taganga)",
+        "Certification PADI internationale"
+      ]
+    },
+    "padi_adv": {
+      "title": "PADI Advanced",
+      "desc": "Améliorez vos compétences. Explorez la plongée profonde, la navigation et bien plus.",
+      "price": "$--- COP",
+      "features": [
+        "5 plongées de spécialité",
+        "Plongée profonde (jusqu'à 30m) et navigation",
+        "Flottabilité optimale",
+        "Certification PADI Advanced Open Water"
+      ]
+    },
+    "book_btn": "Je veux ce cours"
+  },
+  "action": {
+    "title": "Prêt pour l'Aventure de Votre Vie ?",
+    "desc": "Les places pour notre expédition à Taganga sont limitées. Réservez votre place maintenant et préparez-vous à découvrir un tout nouveau monde.",
+    "cta_final": "Réserver ma Place sur WhatsApp"
+  },
+  "nav": {
+    "courses": "Cours PADI",
+    "open_water": "Open Water",
+    "advanced": "Advanced Open Water",
+    "fun_dives": "Fun Dives",
+    "destinations": "Destinations",
+    "blog": "Blog"
+  },
+  "courses": {
+    "open_water": {
+      "title": "Cours PADI Open Water Diver",
+      "subtitle": "Votre passeport pour le monde sous-marin. La certification de plongée la plus reconnue au monde.",
+      "modules_title": "Qu'est-ce qui est inclus ?",
+      "modules": [
+        {
+          "title": "Développement des Connaissances",
+          "desc": "Apprenez les principes de base de la plongée, les concepts de sécurité et la planification des plongées via PADI eLearning ou en classe."
+        },
+        {
+          "title": "Plongées en Eau Confinée",
+          "desc": "Pratiquez les compétences essentielles dans un environnement de type piscine, incluant l'assemblage du matériel, le vidage du masque et le contrôle de la flottabilité."
+        },
+        {
+          "title": "Plongées en Eau Libre",
+          "desc": "Effectuez 4 plongées en mer (Taganga) pour démontrer vos compétences et acquérir une expérience réelle."
+        }
+      ],
+      "prerequisites_title": "Prérequis",
+      "prerequisites": [
+        "Savoir nager et rester à flot pendant 10 minutes.",
+        "Avoir au moins 10 ans.",
+        "Bonne santé générale."
+      ],
+      "cta": "Commencer mon Cours Open Water"
+    },
+    "advanced": {
+      "title": "Cours PADI Advanced Open Water",
+      "subtitle": "Améliorez vos compétences avec 5 plongées d'aventure. Moins de théorie, plus d'action.",
+      "modules_title": "Vos 5 Plongées d'Aventure",
+      "required_title": "Plongées Obligatoires",
+      "required_modules": [
+        {
+          "title": "Plongée Profonde",
+          "desc": "Apprenez à planifier et exécuter des plongées entre 18 et 30 mètres en toute sécurité."
+        },
+        {
+          "title": "Navigation Sous-Marine",
+          "desc": "Améliorez vos compétences à la boussole et apprenez à naviguer en utilisant des repères visuels."
+        }
+      ],
+      "elective_title": "Plongées Électives (Exemples)",
+      "elective_modules": [
+        {
+          "title": "Flottabilité Optimale",
+          "desc": "Maîtrisez votre contrôle dans l'eau pour plonger sans effort et économiser l'air."
+        },
+        {
+          "title": "Plongée de Nuit",
+          "desc": "Découvrez comment le récif s'anime la nuit et apprenez les techniques de communication avec lampe torche."
+        },
+        {
+          "title": "Plongée sur Épave",
+          "desc": "Apprenez les fondamentaux de la plongée sécurisée autour d'épaves."
+        }
+      ],
+      "prerequisites_title": "Prérequis",
+      "prerequisites": [
+        "Être certifié PADI Open Water Diver (ou équivalent).",
+        "Avoir au moins 15 ans (12 ans pour Junior Advanced).",
+        "Bonne santé physique."
+      ],
+      "cta": "Passer au Niveau Suivant"
+    }
+  }
+}

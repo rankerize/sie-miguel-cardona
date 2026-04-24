@@ -1,0 +1,233 @@
+/* ============================================
+   ADVANCED PAGE — Override / Extension Styles
+   ============================================ */
+
+/* Deep purple-blue hero variant */
+.hero::before {
+  background: radial-gradient(circle, rgba(100, 70, 220, 0.15) 0%, transparent 70%) !important;
+}
+
+.noexa {
+  display: inline-block;
+  background: rgba(124, 111, 224, 0.12);
+  border: 1px solid rgba(124, 111, 224, 0.3);
+  color: #a998f5;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1.25rem;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  letter-spacing: 0.03em;
+}
+
+.heroBtn {
+  background: linear-gradient(135deg, #4834d4, #7c6fe0) !important;
+  box-shadow: 0 8px 30px rgba(72, 52, 212, 0.4) !important;
+}
+
+.heroBtn:hover {
+  box-shadow: 0 12px 40px rgba(72, 52, 212, 0.55) !important;
+}
+
+/* ─── GROUP LABEL ─── */
+.groupLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.25rem;
+}
+
+.badge {
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: #48cae4;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+}
+
+.badgeElective {
+  background: rgba(124, 111, 224, 0.12);
+  border-color: rgba(124, 111, 224, 0.3);
+  color: #a998f5;
+}
+
+/* ─── REQUIRED DIVES (2-col horizontal) ─── */
+.requiredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.requiredCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: rgba(0, 180, 216, 0.05);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.requiredCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 180, 216, 0.4);
+}
+
+.reqIconWrap {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00b4d8;
+}
+
+.reqTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.reqDesc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.reqTag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #48cae4;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  display: inline-block;
+}
+
+/* ─── ELECTIVE DIVES (grid) ─── */
+.electiveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.1rem;
+}
+
+.electiveCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.electiveCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124, 111, 224, 0.35);
+}
+
+.electiveIcon {
+  color: #7c6fe0;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.electiveTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.electiveDesc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.55;
+}
+
+.moreCard {
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.moreDots {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* ─── SPECIALTY SECTION ─── */
+.specialtySection {
+  background: rgba(72, 52, 212, 0.05) !important;
+  border-top: 1px solid rgba(124, 111, 224, 0.1);
+  border-bottom: 1px solid rgba(124, 111, 224, 0.1);
+}
+
+.specialtyInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.specialtyIcon {
+  color: #7c6fe0;
+  flex-shrink: 0;
+}
+
+.specialtyInner h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.specialtyInner p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* ─── CTA override ─── */
+.ctaSection {
+  background: linear-gradient(160deg, rgba(50, 30, 100, 0.3) 0%, rgba(10, 10, 40, 0.6) 100%) !important;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #4834d4, #7c6fe0) !important;
+  box-shadow: 0 8px 30px rgba(72, 52, 212, 0.4) !important;
+}
+
+.ctaBtn:hover {
+  box-shadow: 0 12px 40px rgba(72, 52, 212, 0.55) !important;
+}
+
+@media (max-width: 680px) {
+  .specialtyInner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .requiredGrid {
+    grid-template-columns: 1fr;
+  }
+}

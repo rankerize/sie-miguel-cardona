@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "哥伦比亚潜水 | PADI课程 · SIE DIVING",
+    "description": "哥伦比亚潜水胜地：Taganga, Santa Marta。SIE DIVING 是领先潜水学校。"
+  },
+  "hero": {
+    "title": "哥伦比亚潜水",
+    "subtitle": "探索普罗维登西亚、伊斯拉富埃尔特、戈尔戈纳、马尔佩洛和塔甘加的生物多样性。与 SIE DIVING 一起享受精英培训和独特探险。",
+    "cta_primary": "查看探险活动",
+    "cta_whatsapp": "WhatsApp 预约"
+  },
+  "interest": {
+    "title": "哥伦比亚哪里可以潜水？",
+    "desc": "哥伦比亚拥有世界上最好的潜水胜地：普罗维登西亚、伊斯拉富埃尔特、戈尔戈纳、马尔佩洛和塔甘加。SIE DIVING 带您前往所有这些地方。",
+    "features": [
+      { "title": "独特的生物多样性", "desc": "在自然栖息地中邂逅海龟、魟鱼和色彩缤纷的鱼群。" },
+      { "title": "PADI 教练", "desc": "向国际认证专业人员学习，他们将您的安全置于首位。" },
+      { "title": "清澈透明的海水", "desc": "全年在温暖的加勒比海中享受卓越的能见度。" }
+    ]
+  },
+  "desire": {
+    "title": "我们的课程与体验",
+    "date_highlight": "下次探险：6月13日至18日",
+    "padi_ow": {
+      "title": "PADI 开放水域",
+      "desc": "您通往水下世界的护照。全球最受认可的潜水认证。",
+      "price": "$--- COP",
+      "features": ["含全套潜水设备","限制性水域练习课程","4次开放水域潜水（塔甘加）","国际PADI认证"]
+    },
+    "padi_adv": {
+      "title": "PADI 高级",
+      "desc": "将您的技能提升到新水平。探索深潜、导航等更多内容。",
+      "price": "$--- COP",
+      "features": ["5次专项潜水","深潜（最深30米）和导航","峰值表现浮力控制","PADI 高级开放水域认证"]
+    },
+    "book_btn": "我要报名这门课程"
+  },
+  "action": {
+    "title": "准备好迎接人生中的冒险了吗？",
+    "desc": "我们塔甘加探险的名额有限。立即预约，准备发现一个全新的世界。",
+    "cta_final": "通过 WhatsApp 预约我的名额"
+  },
+  "nav": {
+    "courses": "PADI 课程",
+    "open_water": "开放水域",
+    "advanced": "高级开放水域",
+    "fun_dives": "休闲潜水",
+    "destinations": "目的地",
+    "blog": "博客"
+  },
+  "courses": {
+    "open_water": {
+      "title": "PADI 开放水域潜水员课程",
+      "subtitle": "您通往水下世界的护照。全球最受认可的潜水认证。",
+      "modules_title": "包含什么？",
+      "modules": [
+        { "title": "知识发展", "desc": "通过 PADI eLearning 或课堂学习潜水基本原则、安全概念和潜水计划。" },
+        { "title": "限制性水域潜水", "desc": "在类似泳池的环境中练习基本技能，包括装备组装、面镜清水和浮力控制。" },
+        { "title": "开放水域潜水", "desc": "完成4次海洋潜水（在塔甘加），展示您的技能并获得真实的海洋探索体验。" }
+      ],
+      "prerequisites_title": "先决条件",
+      "prerequisites": ["能够游泳并保持漂浮10分钟。","至少10岁。","总体身体健康良好。"],
+      "cta": "开始我的开放水域课程"
+    },
+    "advanced": {
+      "title": "PADI 高级开放水域课程",
+      "subtitle": "通过5次冒险潜水将您的技能提升到新水平。少理论，多行动。",
+      "modules_title": "您的5次冒险潜水",
+      "required_title": "必修潜水",
+      "required_modules": [
+        { "title": "深潜", "desc": "学习安全地计划和执行18至30米之间的潜水。" },
+        { "title": "水下导航", "desc": "提升您的指南针技能，学习使用视觉参考进行导航。" }
+      ],
+      "elective_title": "选修潜水（示例）",
+      "elective_modules": [
+        { "title": "峰值表现浮力", "desc": "掌握您在水中的控制力，以便轻松潜水并节省气体。" },
+        { "title": "夜间潜水", "desc": "发现珊瑚礁在夜间如何焕发生机，并学习手电筒通信技术。" },
+        { "title": "沉船潜水", "desc": "学习在沉船周围安全潜水的基本知识。" }
+      ],
+      "prerequisites_title": "先决条件",
+      "prerequisites": ["持有PADI开放水域潜水员认证（或同等认证）。","至少15岁（青少年高级为12岁）。","良好的身体健康状况。"],
+      "cta": "晋级到下一级别"
+    }
+  }
+}

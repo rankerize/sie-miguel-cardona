@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "SIE DIVING | Santa Marta Expedition",
+    "description": "Join our next scuba diving expedition in Santa Marta. PADI Open Water and Advanced courses from June 13 to 18."
+  },
+  "hero": {
+    "title": "Scuba Diving in Colombia",
+    "subtitle": "Explore the biodiversity of Providencia, Isla Fuerte, Gorgona, Malpelo, and Taganga. Elite training and unique expeditions in Colombia's best diving spots with SIE DIVING.",
+    "cta_primary": "View Expeditions",
+    "cta_whatsapp": "Chat on WhatsApp"
+  },
+  "interest": {
+    "title": "Where to Scuba Dive in Colombia?",
+    "desc": "Colombia has some of the best diving sites in the world: Providencia, Isla Fuerte, Gorgona, Malpelo, and Taganga. SIE DIVING takes you to all of them. We build trust in your training and design experiences for certified divers in Colombia and the world.",
+    "features": [
+      {
+        "title": "Unique Biodiversity",
+        "desc": "Encounter sea turtles, rays, and colorful schools of fish in their natural habitat."
+      },
+      {
+        "title": "PADI Instructors",
+        "desc": "Learn with internationally certified professionals who prioritize your safety above all."
+      },
+      {
+        "title": "Crystal Clear Waters",
+        "desc": "Enjoy exceptional visibility in the warm Caribbean Sea, year-round."
+      }
+    ]
+  },
+  "desire": {
+    "title": "Our Courses & Experiences",
+    "date_highlight": "Next Expedition: June 13–18",
+    "padi_ow": {
+      "title": "PADI Open Water",
+      "desc": "Your passport to the underwater world. The most recognized scuba certification globally.",
+      "price": "$--- COP",
+      "features": [
+        "Full scuba equipment included",
+        "Confined water practice sessions",
+        "4 open water dives (Taganga)",
+        "International PADI Certification"
+      ]
+    },
+    "padi_adv": {
+      "title": "PADI Advanced",
+      "desc": "Take your skills to the next level. Explore deep diving, navigation, and more.",
+      "price": "$--- COP",
+      "features": [
+        "5 specialty dives",
+        "Deep diving (up to 30m) and navigation",
+        "Peak performance buoyancy",
+        "PADI Advanced Open Water Certification"
+      ]
+    },
+    "book_btn": "I want this course"
+  },
+  "action": {
+    "title": "Ready for the Adventure of a Lifetime?",
+    "desc": "Spots for our Taganga expedition are limited. Secure your place now and get ready to discover a brand new world.",
+    "cta_final": "Reserve My Spot on WhatsApp"
+  },
+  "nav": {
+    "courses": "PADI Courses",
+    "open_water": "Open Water",
+    "advanced": "Advanced Open Water",
+    "fun_dives": "Fun Dives",
+    "destinations": "Destinations",
+    "blog": "Blog"
+  },
+  "courses": {
+    "open_water": {
+      "title": "PADI Open Water Diver Course",
+      "subtitle": "Your passport to the underwater world. The most recognized scuba certification globally.",
+      "modules_title": "What's included?",
+      "modules": [
+        {
+          "title": "Knowledge Development",
+          "desc": "Learn the basic principles of scuba diving, safety concepts, and dive planning via PADI eLearning or classroom sessions."
+        },
+        {
+          "title": "Confined Water Dives",
+          "desc": "Practice essential skills in a pool-like environment, including gear assembly, mask clearing, and buoyancy control."
+        },
+        {
+          "title": "Open Water Dives",
+          "desc": "Complete 4 ocean dives (in Taganga) to demonstrate your skills and gain real-world experience exploring the sea."
+        }
+      ],
+      "prerequisites_title": "Prerequisites",
+      "prerequisites": [
+        "Ability to swim and tread water for 10 minutes.",
+        "At least 10 years old.",
+        "Good overall physical health."
+      ],
+      "cta": "Start My Open Water Course"
+    },
+    "advanced": {
+      "title": "PADI Advanced Open Water Course",
+      "subtitle": "Take your skills to the next level with 5 adventure dives. Less theory, more action.",
+      "modules_title": "Your 5 Adventure Dives",
+      "required_title": "Required Dives",
+      "required_modules": [
+        {
+          "title": "Deep Dive",
+          "desc": "Learn to plan and execute dives between 18 and 30 meters (60-100 ft) safely."
+        },
+        {
+          "title": "Underwater Navigation",
+          "desc": "Improve your compass skills and learn to navigate using visual references and kick cycles."
+        }
+      ],
+      "elective_title": "Elective Dives (Examples)",
+      "elective_modules": [
+        {
+          "title": "Peak Performance Buoyancy",
+          "desc": "Master your water control to dive effortlessly and conserve air."
+        },
+        {
+          "title": "Night Diving",
+          "desc": "Discover how the reef comes alive at night and learn flashlight communication techniques."
+        },
+        {
+          "title": "Wreck Diving",
+          "desc": "Learn the fundamentals of safely diving around sunken wrecks."
+        }
+      ],
+      "prerequisites_title": "Prerequisites",
+      "prerequisites": [
+        "Certified as a PADI Open Water Diver (or equivalent).",
+        "At least 15 years old (12 for Junior Advanced).",
+        "Good physical health."
+      ],
+      "cta": "Advance to the Next Level"
+    }
+  }
+}

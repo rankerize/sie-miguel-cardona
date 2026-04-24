@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Buceo en Colombia | Cursos PADI en Taganga, Santa Marta · SIE DIVING",
+    "description": "¿Dónde hacer buceo en Colombia? Taganga, Santa Marta, es el mejor sitio. SIE DIVING es la escuela de buceo líder del Caribe colombiano. Cursos PADI Open Water y Advanced con instructores certificados. Consulta el precio de tu curso."
+  },
+  "hero": {
+    "title": "Buceo en Colombia",
+    "subtitle": "Explora la biodiversidad de Providencia, Isla Fuerte, Gorgona, Malpelo y Taganga. Formación de élite y expediciones únicas en los mejores destinos de Colombia con SIE DIVING.",
+    "cta_primary": "Ver Expediciones",
+    "cta_whatsapp": "Reservar por WhatsApp"
+  },
+  "interest": {
+    "title": "¿Dónde Hacer Buceo en Colombia?",
+    "desc": "Colombia tiene algunos de los mejores sitios de buceo del mundo: Providencia, Isla Fuerte, Gorgona, Malpelo y Taganga. SIE DIVING te lleva a todos ellos. Generamos confianza en tu formación y diseñamos experiencias para buzos certificados en Colombia y el mundo.",
+    "features": [
+      {
+        "title": "Los Mejores Sitios de Buceo",
+        "desc": "Taganga concentra arrecifes de coral, tortugas marinas y visibilidad de hasta 20 metros. Uno de los mejores sitios de buceo en Colombia según buceadores de todo el mundo."
+      },
+      {
+        "title": "Escuela PADI Certificada",
+        "desc": "SIE DIVING es una escuela de buceo en Colombia con instructores PADI de élite. Formamos principiantes y buceadores avanzados con los más altos estándares internacionales de seguridad."
+      },
+      {
+        "title": "Precio Justo, Calidad Premium",
+        "desc": "¿Cuánto vale un curso de buceo en Colombia? Con SIE DIVING obtienes certificación PADI internacional, equipo incluido y grupos pequeños al mejor precio del Caribe colombiano."
+      }
+    ]
+  },
+  "desire": {
+    "title": "Cursos de Buceo en Colombia",
+    "date_highlight": "¡PRÓXIMA EXPEDICIÓN: 13 AL 18 DE JUNIO — CUPOS LIMITADOS!",
+    "padi_ow": {
+      "title": "PADI Open Water Diver",
+      "desc": "El curso de buceo más popular en Colombia. En 3–5 días obtienes tu certificación PADI internacional, válida en todo el mundo para bucear hasta 18 metros.",
+      "price": "Consulta precio por WhatsApp",
+      "features": [
+        "Todo el equipo de buceo incluido (BCD, regulador, traje)",
+        "Práctica guiada en piscina y aguas confinadas",
+        "4 inmersiones en el mar de Taganga, Santa Marta",
+        "Certificación PADI válida internacionalmente"
+      ]
+    },
+    "padi_adv": {
+      "title": "PADI Advanced Open Water",
+      "desc": "El mejor buceo en Colombia requiere más profundidad. Con el curso Advanced llegas a 30 metros, sin examen final y con 5 inmersiones de aventura pura.",
+      "price": "Consulta precio por WhatsApp",
+      "features": [
+        "5 inmersiones de aventura: profundidad, navegación y más",
+        "Buceo profundo hasta 30 metros en Taganga",
+        "Sin examen final — más acción, menos teoría",
+        "Certificación PADI Advanced Open Water"
+      ]
+    },
+    "book_btn": "Reservar mi Cupo"
+  },
+  "action": {
+    "title": "El Mejor Buceo en Colombia, un Solo Mensaje",
+    "desc": "No busques más dónde hacer buceo en Colombia — Taganga tiene todo: coral, agua cristalina, fauna marina y una escuela PADI que cuida cada detalle. Los cupos para la expedición de Junio se agotan rápido.",
+    "cta_final": "Reservar mi Cupo Ahora"
+  },
+  "nav": {
+    "courses": "Cursos PADI",
+    "open_water": "Open Water",
+    "advanced": "Advanced Open Water",
+    "fun_dives": "Fun Dives",
+    "destinations": "Destinos",
+    "blog": "Blog"
+  },
+  "courses": {
+    "open_water": {
+      "title": "Curso PADI Open Water Diver",
+      "subtitle": "Tu pasaporte al mundo submarino. La certificación de buceo más reconocida mundialmente.",
+      "modules_title": "¿Qué incluye el curso?",
+      "modules": [
+        {
+          "title": "Desarrollo de Conocimientos",
+          "desc": "Aprende los principios básicos del buceo, conceptos de seguridad y planificación de inmersiones mediante PADI eLearning o en el aula."
+        },
+        {
+          "title": "Inmersiones en Aguas Confinadas",
+          "desc": "Practica habilidades esenciales en una piscina o aguas similares, incluyendo ensamblaje del equipo, vaciado de máscara y control de flotabilidad."
+        },
+        {
+          "title": "Inmersiones en Aguas Abiertas",
+          "desc": "Completa 4 inmersiones en el mar (Taganga) para demostrar tus habilidades y ganar experiencia real explorando el océano."
+        }
+      ],
+      "prerequisites_title": "Requisitos Previos",
+      "prerequisites": [
+        "Saber nadar y mantenerse a flote por 10 minutos.",
+        "Tener al menos 10 años de edad.",
+        "Buen estado de salud general."
+      ],
+      "cta": "Empezar mi Curso Open Water"
+    },
+    "advanced": {
+      "title": "Curso PADI Advanced Open Water",
+      "subtitle": "Lleva tus habilidades al siguiente nivel con 5 inmersiones de aventura. Menos teoría, más acción.",
+      "modules_title": "Tus 5 Inmersiones de Aventura",
+      "required_title": "Inmersiones Obligatorias",
+      "required_modules": [
+        {
+          "title": "Buceo Profundo (Deep Dive)",
+          "desc": "Aprende a planificar y ejecutar inmersiones entre 18 y 30 metros de profundidad de forma segura."
+        },
+        {
+          "title": "Navegación Subacuática",
+          "desc": "Mejora tus habilidades con la brújula y aprende a orientarte utilizando referencias visuales y ciclos de aleteo."
+        }
+      ],
+      "elective_title": "Inmersiones Electivas (Ejemplos)",
+      "elective_modules": [
+        {
+          "title": "Flotabilidad Perfecta",
+          "desc": "Domina tu control en el agua para bucear sin esfuerzo y conservar más aire."
+        },
+        {
+          "title": "Buceo Nocturno",
+          "desc": "Descubre cómo el arrecife cobra vida por la noche y aprende técnicas de comunicación con linternas."
+        },
+        {
+          "title": "Buceo en Barcos Hundidos",
+          "desc": "Aprende los fundamentos para bucear de forma segura alrededor de naufragios."
+        }
+      ],
+      "prerequisites_title": "Requisitos Previos",
+      "prerequisites": [
+        "Estar certificado como PADI Open Water Diver (o equivalente).",
+        "Tener al menos 15 años de edad (12 años para Junior Advanced).",
+        "Buen estado de salud."
+      ],
+      "cta": "Avanzar al Siguiente Nivel"
+    }
+  }
+}

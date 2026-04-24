@@ -1,0 +1,418 @@
+/* ============================================
+   PADI COURSE PAGES — Shared Styles
+   ============================================ */
+
+.page {
+  min-height: 100vh;
+  background: #040a1c;
+  color: #fff;
+  padding-top: 80px; /* Navbar offset */
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 7rem 2rem 6rem;
+  background: linear-gradient(160deg, #040a1c 0%, #041430 40%, #061a40 70%, #040a1c 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  color: #48cae4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 30%, #48cae4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  max-width: 800px;
+  margin: 0 auto 1.25rem;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  overflow: hidden;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  flex: 1;
+  min-width: 110px;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #00b4d8;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0096c7, #00b4d8);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 30px rgba(0, 150, 199, 0.35);
+}
+
+.heroBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 150, 199, 0.5);
+}
+
+/* ─── SECTIONS ─── */
+.section {
+  padding: 5rem 2rem;
+}
+
+.section:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 30%, #48cae4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.sectionDesc {
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ─── MODULE CARDS ─── */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.moduleCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.moduleCard:hover {
+  border-color: rgba(0, 180, 216, 0.3);
+  transform: translateY(-4px);
+}
+
+.moduleBadge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #00b4d8;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+}
+
+.moduleIconWrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00b4d8;
+  margin-bottom: 1.25rem;
+}
+
+.moduleTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.moduleDesc {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ─── DETAIL SECTION ─── */
+.detailSection {
+  background: linear-gradient(180deg, rgba(0, 20, 50, 0.5) 0%, transparent 100%) !important;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detailCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.detailCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #48cae4;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.detailCardIcon {
+  color: #00b4d8;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+.detailList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detailList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: #00b4d8;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ─── PREREQUISITES ─── */
+.prereqBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  padding: 2.5rem 3rem;
+}
+
+.prereqLeft {
+  flex: 0 0 240px;
+}
+
+.prereqIcon {
+  color: #00b4d8;
+  margin-bottom: 1rem;
+}
+
+.prereqList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.prereqList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+/* ─── INFO CARDS ─── */
+.infoSection {
+  background: transparent !important;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: rgba(0, 180, 216, 0.05);
+  border: 1px solid rgba(0, 180, 216, 0.15);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.infoCard h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #48cae4;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.infoCard p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.infoIcon {
+  color: #00b4d8;
+}
+
+/* ─── CTA SECTION ─── */
+.ctaSection {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(0, 60, 100, 0.3) 0%, rgba(0, 20, 50, 0.5) 100%);
+  border-top: 1px solid rgba(0, 180, 216, 0.12);
+}
+
+.ctaSection h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #48cae4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0096c7, #00b4d8);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1rem 2.25rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 30px rgba(0, 150, 199, 0.35);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 150, 199, 0.5);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .hero { padding: 5rem 1.25rem 4rem; }
+  .heroStats { margin: 0 -0.5rem 2rem; }
+  .stat { padding: 1rem 1rem; min-width: 90px; }
+  .statValue { font-size: 1.4rem; }
+  .prereqBlock {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+  .prereqLeft { flex: none; }
+  .section { padding: 3.5rem 1.25rem; }
+}

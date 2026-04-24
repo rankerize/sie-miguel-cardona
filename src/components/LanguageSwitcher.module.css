@@ -1,0 +1,127 @@
+/* ============================================
+   LANGUAGE SWITCHER — SIE DIVING
+   ============================================ */
+
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.trigger:hover {
+  background: rgba(0, 180, 216, 0.12);
+  border-color: rgba(0, 180, 216, 0.45);
+  color: #fff;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12);
+  line-height: 0;
+}
+
+.label {
+  display: inline-block;
+}
+
+.chevron {
+  transition: transform 0.25s ease;
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ---- Dropdown ---- */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  min-width: 170px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  background: rgba(4, 14, 38, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 180, 216, 0.05);
+  animation: langFadeDown 0.18s ease;
+  z-index: 200;
+}
+
+@keyframes langFadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 9px;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.option:hover {
+  background: rgba(0, 180, 216, 0.1);
+  color: #fff;
+}
+
+.active {
+  color: #00b4d8 !important;
+  background: rgba(0, 180, 216, 0.08) !important;
+}
+
+.optionLabel {
+  flex: 1;
+}
+
+.check {
+  font-size: 0.75rem;
+  color: #00b4d8;
+  font-weight: 700;
+}
+
+/* Mobile: hide label, show only flag */
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+  .trigger {
+    padding: 0.35rem 0.5rem;
+  }
+}
