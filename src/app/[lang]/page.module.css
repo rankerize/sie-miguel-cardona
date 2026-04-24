@@ -522,6 +522,182 @@
   transition: opacity 0.2s;
 }
 
+/* ── EQUIPOS DE BUCEO ── */
+.equipmentSection {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--color-bg) 0%, #030814 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.equipBadge {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 30px;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.equipTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.equipDesc {
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.equipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.equipCard {
+  padding: 2rem;
+  background: rgba(10, 15, 25, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.equipCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.equipCard:hover {
+  transform: translateY(-5px);
+  background: rgba(15, 25, 40, 0.6);
+  border-color: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.equipCard:hover::before {
+  transform: translateX(100%);
+}
+
+.equipIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 229, 255, 0.1);
+  border-radius: 50%;
+  color: var(--color-primary);
+}
+
+.equipCardTitle {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.equipCardDesc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ocean Banner */
+.oceanBanner {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background: rgba(4, 10, 28, 0.6);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.oceanCard {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 100, 200, 0.05) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.oceanCardPacific {
+  background: linear-gradient(135deg, rgba(0, 60, 120, 0.1) 0%, rgba(0, 20, 60, 0.05) 100%);
+  border-color: rgba(0, 60, 120, 0.2);
+}
+
+.oceanCard:hover {
+  transform: translateY(-5px);
+}
+
+.oceanEmoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.oceanName {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.oceanSites {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.oceanList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.oceanList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-muted);
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.oceanDivider {
+  font-size: 2rem;
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+
 .footerContact a:hover {
   opacity: 0.8;
 }
@@ -533,5 +709,18 @@
   }
   .navCta {
     display: none !important;
+  }
+  
+  .oceanBanner {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .oceanCard {
+    min-width: 100%;
+  }
+  
+  .equipTitle {
+    font-size: 2rem;
   }
 }

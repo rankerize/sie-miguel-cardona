@@ -128,6 +128,125 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </section>
       )}
 
+      {/* EQUIPOS DE BUCEO SEGURO */}
+      {(() => {
+        const isEs = lang === 'es';
+        const GEAR = [
+          {
+            icon: '🥽',
+            titleEs: 'Máscara de Buceo',
+            titleEn: 'Diving Mask',
+            descEs: 'Vidrio templado de doble lente y silicona hipoalergénica. Ajuste hermético esencial en las aguas del Caribe y el Pacífico colombiano.',
+            descEn: 'Tempered double-lens glass and hypoallergenic silicone. A perfect seal is essential in Colombia\'s Caribbean and Pacific waters.',
+          },
+          {
+            icon: '🦺',
+            titleEs: 'Chaleco Hidrostático (BCD)',
+            titleEn: 'Buoyancy Control Device',
+            descEs: 'Regula tu flotabilidad en aguas cambiantes. Imprescindible para las fuertes corrientes de Malpelo y Gorgona en el Pacífico.',
+            descEn: 'Controls buoyancy in changing waters. Essential for the strong currents of Malpelo and Gorgona in the Pacific.',
+          },
+          {
+            icon: '💨',
+            titleEs: 'Regulador de Primera y Segunda Etapa',
+            titleEn: 'First & Second Stage Regulator',
+            descEs: 'Tu fuente de aire bajo el agua. Usamos reguladores DIN certificados, revisados antes de cada inmersión en nuestras dos costas.',
+            descEn: 'Your air source underwater. We use certified DIN regulators, checked before every dive on both coasts.',
+          },
+          {
+            icon: '🌊',
+            titleEs: 'Traje de Neopreno',
+            titleEn: 'Wetsuit',
+            descEs: 'Caribe (Taganga, Providencia): 3 mm · 26–29 °C. Pacífico (Gorgona, Malpelo): 5–7 mm · 20–24 °C. Siempre el grosor correcto según el océano.',
+            descEn: 'Caribbean (Taganga, Providencia): 3 mm · 26–29 °C. Pacific (Gorgona, Malpelo): 5–7 mm · 20–24 °C. Always the right thickness for each ocean.',
+          },
+          {
+            icon: '⌚',
+            titleEs: 'Computador de Buceo',
+            titleEn: 'Dive Computer',
+            descEs: 'Monitoreo en tiempo real de profundidad, tiempo y límites de no descompresión. Obligatorio en las inmersiones técnicas del Pacífico.',
+            descEn: 'Real-time monitoring of depth, time and no-decompression limits. Mandatory for technical Pacific dives.',
+          },
+          {
+            icon: '🔦',
+            titleEs: 'Linterna Subacuática',
+            titleEn: 'Underwater Torch',
+            descEs: 'Revela los colores reales a partir de los 10 m. Esencial en las grutas coralinas de Providencia y los fondos oscuros del Pacífico.',
+            descEn: 'Reveals true colors below 10 m. Essential in Providencia\'s coral caves and the Pacific\'s dark depths.',
+          },
+          {
+            icon: '🎯',
+            titleEs: 'Boya SMB (Señal de Superficie)',
+            titleEn: 'SMB Surface Marker Buoy',
+            descEs: 'Señaliza tu posición al salir en mar abierto. Indispensable en las salidas oceánicas de Malpelo y Gorgona.',
+            descEn: 'Signals your position when surfacing in open sea. Indispensable on ocean dives at Malpelo and Gorgona.',
+          },
+          {
+            icon: '🐟',
+            titleEs: 'Aletas de Propulsión',
+            titleEn: 'Propulsion Fins',
+            descEs: 'Aletas de paleta o split según la corriente. Las corrientes del Pacífico exigen mayor potencia que las aguas cálidas del Caribe.',
+            descEn: 'Blade or split fins depending on currents. Pacific currents demand more power than the warm Caribbean waters.',
+          },
+        ];
+        return (
+          <section className={styles.equipmentSection} id="equipo-buceo">
+            <div className="container">
+              <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                <span className={styles.equipBadge}>
+                  🤿 {isEs ? 'Seguridad · Tecnología · Confort' : 'Safety · Technology · Comfort'}
+                </span>
+                <h2 className={`text-gradient ${styles.equipTitle}`}>
+                  {isEs ? 'Equipo para un Buceo Seguro en Colombia' : 'Equipment for Safe Diving in Colombia'}
+                </h2>
+                <p className={styles.equipDesc}>
+                  {isEs
+                    ? 'Dos océanos, dos realidades distintas. En SIE DIVING seleccionamos y mantenemos el equipo adecuado para las condiciones específicas del Caribe y el Pacífico colombiano.'
+                    : 'Two oceans, two different realities. At SIE DIVING we select and maintain the right gear for the specific conditions of the Colombian Caribbean and Pacific.'}
+                </p>
+              </div>
+
+              <div className={styles.equipGrid}>
+                {GEAR.map((item, i) => (
+                  <div key={i} className={`glass-panel ${styles.equipCard}`}>
+                    <div className={styles.equipIcon}>{item.icon}</div>
+                    <h3 className={styles.equipCardTitle}>{isEs ? item.titleEs : item.titleEn}</h3>
+                    <p className={styles.equipCardDesc}>{isEs ? item.descEs : item.descEn}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Ocean conditions banner */}
+              <div className={styles.oceanBanner}>
+                <div className={styles.oceanCard}>
+                  <div className={styles.oceanEmoji}>🌴</div>
+                  <div className={styles.oceanName}>{isEs ? 'Caribe Colombiano' : 'Colombian Caribbean'}</div>
+                  <div className={styles.oceanSites}>Taganga · Providencia · Isla Fuerte</div>
+                  <ul className={styles.oceanList}>
+                    <li>🌡️ 26–29 °C</li>
+                    <li>👁️ {isEs ? 'Visibilidad 15–30 m' : '15–30 m visibility'}</li>
+                    <li>🌊 {isEs ? 'Corrientes suaves' : 'Mild currents'}</li>
+                    <li>🤿 {isEs ? 'Traje 3 mm' : '3 mm wetsuit'}</li>
+                  </ul>
+                </div>
+                <div className={styles.oceanDivider}>⚡</div>
+                <div className={`${styles.oceanCard} ${styles.oceanCardPacific}`}>
+                  <div className={styles.oceanEmoji}>🦈</div>
+                  <div className={styles.oceanName}>{isEs ? 'Pacífico Colombiano' : 'Colombian Pacific'}</div>
+                  <div className={styles.oceanSites}>Gorgona · Malpelo</div>
+                  <ul className={styles.oceanList}>
+                    <li>🌡️ 20–24 °C</li>
+                    <li>👁️ {isEs ? 'Visibilidad 10–20 m' : '10–20 m visibility'}</li>
+                    <li>🌊 {isEs ? 'Corrientes fuertes' : 'Strong currents'}</li>
+                    <li>🤿 {isEs ? 'Traje 5–7 mm' : '5–7 mm wetsuit'}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* (D) DESEO - CURSOS Y EXPERIENCIAS */}
       {dict.desire && (
         <section id="cursos" className="section" style={{ background: 'var(--color-bg)' }}>
