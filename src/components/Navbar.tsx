@@ -59,7 +59,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
         {/* Desktop menu */}
         <ul className={styles.desktopMenu}>
           {/* Cursos dropdown */}
-          <li ref={dropdownRef} className={styles.dropdownWrapper}>
+          <li
+            ref={dropdownRef}
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => !menuOpen && setCoursesOpen(true)}
+            onMouseLeave={() => !menuOpen && setCoursesOpen(false)}
+          >
             <button
               className={styles.navBtn}
               onClick={() => setCoursesOpen((v) => !v)}
@@ -112,7 +117,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           </li>
 
           {/* Fun Dives dropdown */}
-          <li ref={funDivesRef} className={styles.dropdownWrapper}>
+          <li
+            ref={funDivesRef}
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => !menuOpen && setFunDivesOpen(true)}
+            onMouseLeave={() => !menuOpen && setFunDivesOpen(false)}
+          >
             <button
               className={styles.navBtn}
               onClick={() => setFunDivesOpen((v) => !v)}
@@ -165,16 +175,21 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             )}
           </li>
 
-          {/* Destinations dropdown */}
-          <li ref={destsRef} className={styles.dropdownWrapper}>
-            <button
+          {/* Expeditions dropdown */}
+          <li
+            ref={destsRef}
+            className={styles.dropdownWrapper}
+            onMouseEnter={() => setDestsOpen(true)}
+            onMouseLeave={() => setDestsOpen(false)}
+          >
+            <Link
+              href={`/${lang}/expediciones`}
               className={styles.navBtn}
-              onClick={() => setDestsOpen((v) => !v)}
-              aria-expanded={destsOpen}
+              onClick={() => setDestsOpen(false)}
             >
               {dict.destinations}
               <ChevronDown size={16} className={`${styles.chevron} ${destsOpen ? styles.chevronOpen : ""}`} />
-            </button>
+            </Link>
             {destsOpen && (
               <div className={styles.dropdown}>
                 <Link href={`/${lang}/destinos/santa-marta`} className={styles.dropdownItem} onClick={() => setDestsOpen(false)}>
@@ -214,6 +229,13 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 </Link>
               </div>
             )}
+          </li>
+
+          {/* Noticias / Blog */}
+          <li>
+            <Link href={`/${lang}/noticias`} className={styles.navBtn}>
+              {dict.blog || "Noticias"}
+            </Link>
           </li>
         </ul>
 
@@ -272,7 +294,14 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </Link>
           </div>
           <div className={styles.mobileSection}>
-            <div className={styles.mobileSectionLabel}>{dict.destinations}</div>
+            <Link 
+              href={`/${lang}/expediciones`} 
+              className={styles.mobileSectionLabel} 
+              style={{ display: 'block', textDecoration: 'none' }}
+              onClick={() => setMenuOpen(false)}
+            >
+              {dict.destinations}
+            </Link>
             <Link href={`/${lang}/destinos/santa-marta`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
               <MapPin size={18} />Santa Marta
             </Link>
@@ -287,6 +316,15 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             </Link>
             <Link href={`/${lang}/destinos/isla-fuerte`} className={styles.mobileItem} onClick={() => setMenuOpen(false)}>
               <MapPin size={18} />Isla Fuerte
+            </Link>
+          </div>
+          <div className={styles.mobileSection}>
+            <Link
+              href={`/${lang}/noticias`}
+              className={styles.mobileItem}
+              onClick={() => setMenuOpen(false)}
+            >
+              📰 {dict.blog || "Noticias"}
             </Link>
           </div>
         </div>

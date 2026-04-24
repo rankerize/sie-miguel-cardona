@@ -147,7 +147,7 @@
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 0.75rem);
+  top: 100%;
   left: 0;
   min-width: 320px;
   background: rgba(4, 14, 38, 0.97);
@@ -155,12 +155,24 @@
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(0, 180, 216, 0.2);
   border-radius: 16px;
-  padding: 0.75rem;
+  /* padding-top adds visual breathing room; pseudo-element bridges the gap */
+  padding: 1.25rem 0.75rem 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 180, 216, 0.05);
   animation: fadeDown 0.2s ease;
+}
+
+/* Invisible bridge that fills the gap between nav button and dropdown */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
 }
 
 @keyframes fadeDown {
