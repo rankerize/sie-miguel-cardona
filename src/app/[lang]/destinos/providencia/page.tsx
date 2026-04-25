@@ -14,10 +14,10 @@ const DIVE_SPOTS = [
 ];
 
 const GASTRO = [
-  { dish: "Rondón", img: "/images/img-97f229ba.jpg", desc: "El plato insignia de Providencia: caracol, cangrejo y ñame cocidos en leche de coco. Patrimonio Cultural UNESCO.", tags: ["Patrimonio","Caribe","Coco"] },
-  { dish: "Cangrejo Negro", img: "/images/img-b707a6e7.jpg", desc: "Especie endémica de la isla, preparada al vapor o en sopa de coco. Una delicia que solo existe aquí.", tags: ["Endémico","Sostenible","Único"] },
-  { dish: "Ceviche de Caracol", img: "/images/img-6aa47b93.jpg", desc: "Caracola reina marinada en limón con ají chombo local, cebolla cabezona y tomates frescos.", tags: ["Fresco","Picante","Local"] },
-  { dish: "Paté de Ackee", img: "/images/img-0155d254.jpg", desc: "Fruta ackee sofrita con bacalao salado. Un desayuno típico de la cultura raizal anglófona.", tags: ["Raizal","Afro-Caribe","Tradicional"] },
+  { dish: "Rondón", img: "/images/rondon.png", desc: "El plato insignia de Providencia: caracol, cangrejo y ñame cocidos en leche de coco. Patrimonio Cultural UNESCO.", tags: ["Patrimonio","Caribe","Coco"] },
+  { dish: "Cangrejo Negro", img: "/images/cangrejo_negro.png", desc: "Especie endémica de la isla, preparada al vapor o en sopa de coco. Una delicia que solo existe aquí.", tags: ["Endémico","Sostenible","Único"] },
+  { dish: "Ceviche de Caracol", img: "/images/ceviche_caracol.png", desc: "Caracola reina marinada en limón con ají chombo local, cebolla cabezona y tomates frescos.", tags: ["Fresco","Picante","Local"] },
+  { dish: "Paté de Ackee", img: "/images/ackee_saltfish.png", desc: "Fruta ackee sofrita con bacalao salado. Un desayuno típico de la cultura raizal anglófona.", tags: ["Raizal","Afro-Caribe","Tradicional"] },
 ];
 
 export default async function ProvidenciaPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -119,7 +119,7 @@ export default async function ProvidenciaPage({ params }: { params: Promise<{ la
         <div className={styles.container}>
           <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "2.5rem" }}>{isEs ? "Más Destinos" : "More Destinations"}</h2>
           <div className={styles.otherGrid}>
-            <Link href={`/${lang}/destinos/santa-marta`} className={styles.otherCard} style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586398660697-d4a1f4f56f93?w=800&q=80')" }}>
+            <Link href={`/${lang}/destinos/santa-marta`} className={styles.otherCard} style={{ backgroundImage: "url('/Morena.jpg')" }}>
               <div className={styles.otherOverlay} />
               <div className={styles.otherBody}><span className={styles.otherTag}>Caribe</span><h3>Santa Marta</h3><p>{isEs ? "Taganga, corales y gastronomía costeña" : "Taganga, corals and coastal gastronomy"}</p></div>
             </Link>

@@ -112,7 +112,7 @@ export default async function IslaFuertePage({ params }: { params: Promise<{ lan
         <div className={styles.container}>
           <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "2.5rem" }}>{isEs ? "Más Destinos" : "More Destinations"}</h2>
           <div className={styles.otherGrid}>
-            <Link href={`/${lang}/destinos/santa-marta`} className={styles.otherCard} style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586398660697-d4a1f4f56f93?w=800&q=80')" }}>
+            <Link href={`/${lang}/destinos/santa-marta`} className={styles.otherCard} style={{ backgroundImage: "url('/Morena.jpg')" }}>
               <div className={styles.otherOverlay} />
               <div className={styles.otherBody}><span className={styles.otherTag}>Caribe</span><h3>Santa Marta</h3><p>{isEs ? "Taganga, corales y gastronomía costeña" : "Taganga, corals and coastal gastronomy"}</p></div>
             </Link>

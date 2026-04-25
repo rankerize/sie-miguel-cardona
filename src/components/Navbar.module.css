@@ -231,6 +231,8 @@
   flex-direction: column;
   gap: 0.25rem;
   animation: fadeIn 0.2s ease;
+  max-height: calc(100vh - 85px); /* Resta el alto aproximado del logo/header */
+  overflow-y: auto;
 }
 
 @keyframes fadeIn {

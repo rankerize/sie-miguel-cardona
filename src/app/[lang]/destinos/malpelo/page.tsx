@@ -43,7 +43,7 @@ export default async function MalpeloPage({ params }: { params: Promise<{ lang: 
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -50%) scale(1.5)",
             zIndex: 0
           }}
         >
